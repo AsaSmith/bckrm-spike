@@ -6,6 +6,7 @@ const sugarss = require('sugarss')
 const postcssImport = require('postcss-import')
 const cssnext = require('postcss-cssnext')
 const rucksack = require('rucksack-css')
+const googleFonts = require('postcss-google-font')
 const lost = require('lost')
 const es2015 = require('babel-preset-es2015')
 const stage2 = require('babel-preset-stage-2')
@@ -28,7 +29,7 @@ module.exports = {
   postcss: (ctx) => {
     const atImport = postcssImport({ addDependencyTo: ctx })
     return {
-      plugins: [atImport, cssnext(), rucksack(), lost()],
+      plugins: [atImport, cssnext(), rucksack(), lost(), googleFonts()],
       parser: sugarss
     }
   },
