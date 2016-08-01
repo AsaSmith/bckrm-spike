@@ -1,33 +1,36 @@
 extends layout
 
-block content
-  include ./includes/header.jade
-  h2 Hello World!
-  p Thanks for using #[a(href='https://github.com/static-dev/spike') spike]
-  p Example of locals: #{foo}
-  md Example of **markdown**
-  p Example of "smart quotes" -- and dashes
+block body
 
-  hr
-  
-  h3 Getting Started
-  h4 The Stack:
-  ul
-    li
-      a(href="http://jade-lang.com") jade
-      |  for markup
-    li
-      a(href="https://babeljs.io/") babel
-      |  for JS transforms
-    li
-      a(href="http://postcss.org/") postcss
-      |  for CSS
-    li
-      a(href="http://webpack.github.io") webpack
-      |  for JS bundling
+  body#index
     
-  p Customize your settings by editing the 
-    a(href="https://github.com/static-dev/spike#appjs") app.js
-    |  file or simply start by editing this view
+    #bg-img-wrapper
+    
+      include ./includes/header.jade
+      
+      .hero
+        h1 Backroom builds brands for people who keep Baltimore visionaries going strong.
+        h2 Gundalow Juice helps everyday warriors fuel their ambitions. 
+    
+    #main-content
+      h2 Backroom creates deliberate brands for ambitious people.
+      h3 We believe great brands come from smarts, collaboration, art & iteration.
+      
+      #blog-wrapper
+        h2 Learn more about what we believe.
+        
+        #blog-posts.recent
+          .post 
+            h2 The War on Crap
+            p Fanny pack tumblr lumbersexual pabst mlkshk you probably haven't heard of them locavore authentic. Yr chambray stumptown, authentic whatever biodiesel cronut small batch food truck dreamcatcher tote bag quinoa. Four loko single-origin coffee fashion axe narwhal, mumblecore fanny pack franzen +1 chicharrones viral retro letterpress post-ironic flannel semiotics. Actually intelligentsia offal single-origin coffee.
+             
+          .post 
+            h2 What's Your Promise?
+            p Pickled chicharrones ethical, lo-fi shoreditch raw denim single-origin coffee blog four dollar toast farm-to-table before they sold out. Messenger bag schlitz roof party gentrify. Brooklyn disrupt cray normcore put a bird on it, skateboard DIY cold-pressed bitters cornhole tofu heirloom everyday carry polaroid health goth.
+            
+          .post
+            h2 Keys To Building a Disruptive Brand
+            p DIY cred selfies narwhal, cray typewriter affogato tote bag food truck master cleanse lumbersexual cronut whatever. Slow-carb yr post-ironic, polaroid chicharrones narwhal intelligentsia umami direct trade. Authentic salvia leggings, art party farm-to-table iPhone pour-over tousled deep v meggings banjo single-origin coffee.
+        
 
-  include ./includes/footer.jade
+    include ./includes/footer.jade
