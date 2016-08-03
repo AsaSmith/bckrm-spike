@@ -5,11 +5,14 @@
   flex-direction: column
   @media (min-width: 32em)
     flex-direction: row
-    
+
   & #logo
     display: flex
     flex: 1
     margin: 1em
+    justify-content: center
+    @media (min-width: 32em)
+      justify-content: flex-start
     //Muliline selector???
     & rect
       fill: transparent
@@ -29,3 +32,8 @@
       flex: 1
       align-items: center
       font-size: 1.5em
+    & a
+      padding: .25em
+      &:hover
+        background-color: #C6C6D0
+        border-radius: 5px
