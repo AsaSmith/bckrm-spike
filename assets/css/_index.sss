@@ -1,14 +1,42 @@
 /*#index*/
 #index
-#bg-img-wrapper
-  height: 100vh
-  background: url(/img/hero.jpg) no-repeat center center
-  background-size: cover
-  color: white
-  & .flex-wrap
-    display: flex
+  & #bg-img-wrapper
     height: 100vh
-    & .hero
-      max-width: 44em
-      margin: auto
-      text-align: center
+    background: url(/img/hero.jpg) no-repeat center center
+    background-size: cover
+    color: white
+    & .flex-wrap
+      display: flex
+      height: 100vh
+      & .hero
+        max-width: 44em
+        margin: auto
+        text-align: center
+
+  & #main-content
+    width: 90%
+    margin: 8em auto
+    & #blog-wrapper
+      margin: 2em auto
+      padding: 2em
+      @media (min-width: 32em)
+        margin: 8em auto
+        padding: 2em
+      & #blog-posts
+        width: 100%
+        margin: auto
+        display: flex
+        flex-direction: column
+        @media (min-width: 66em)
+          flex-direction: row
+        & .post
+          flex: 1
+          padding: 0 1em 1em 1em
+          margin: 1em 0
+          max-width: 32em
+          @media (min-width: 66em)
+            margin: 1em
+        & .recent
+          background-color: #cfcfd1
+          @media (min-width: 66em)
+            margin: 1em 2em 1em 1em
